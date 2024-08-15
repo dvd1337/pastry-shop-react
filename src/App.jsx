@@ -1,18 +1,23 @@
 import "./App.css";
 import "./Mobile.css";
 import Carrinho from "./components/Carrinho";
-import { CartProvider } from "./components/CartProvider";
-import Menu from "./menu/Menu";
+import { Provider } from "./components/Provider";
+import Menu from "./components/Menu";
+import CompraFinalizada from "./components/CompraFinalizada";
+import { CompraProvider } from "./components/CompraContext";
 
 function App() {
   return (
     <>
-      <main>
-        <CartProvider>
-          <Menu />
-          <Carrinho />
-        </CartProvider>
-      </main>
+      <CompraProvider>
+        <main>
+          <Provider>
+            <Menu />
+            <Carrinho />
+          </Provider>
+        </main>
+        <CompraFinalizada />
+      </CompraProvider>
     </>
   );
 }
