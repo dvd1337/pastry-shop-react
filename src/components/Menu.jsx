@@ -1,14 +1,14 @@
 import { useState } from "react";
 import MenuItem from "./MenuItem";
-import data from "./dataMenu";
+import dataMenu from "../data/dataMenu";
 
 function Menu() {
-  const [menuItems] = useState(data);
+  const [menuItems] = useState(dataMenu);
 
   return (
     <>
-      <h1>Dessert</h1>
       <div id="restaurante">
+        <h1>Dessert</h1>
         {menuItems.map((item) => (
           <MenuItem
             key={item.name}

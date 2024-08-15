@@ -43,7 +43,7 @@ import pannaCottaMobile from '../assets/images/image-panna-cotta-mobile.jpg';
 import pannaCottaTablet from '../assets/images/image-panna-cotta-tablet.jpg';
 import pannaCottaDesktop from '../assets/images/image-panna-cotta-desktop.jpg';
 
-const data = [
+const dataMenu = [
   {
     image: {
       thumbnail: waffleThumbnail,
@@ -145,4 +145,4 @@ const data = [
   }
 ];
 
-export default data;
+export default dataMenu;
