@@ -6,16 +6,15 @@ import { useCompra } from "./UseCompra";
 
 function Carrinho() {
   const { cartItems, setCartItems } = useContext(Context);
-  const { concluirCompra } = useCompra(); // Use o hook
+  const { concluirCompra } = useCompra();
 
-  // Função para remover um item do carrinho
   const removeItem = (name) => {
     setCartItems((prevItems) => prevItems.filter((item) => item.name !== name));
   };
 
   const quantity = cartItems.reduce((total, item) => total + item.quantity, 0);
   const totalPrice = cartItems.reduce(
-    (total, item) => total + (item.price || 0) * item.quantity, // Verifica se price está definido
+    (total, item) => total + (item.price || 0) * item.quantity,
     0
   );
 
@@ -36,6 +35,12 @@ function Carrinho() {
             <div id="orderCart">
               <div id="total">Order Total</div>
               <div id="preco">${totalPrice.toFixed(2)}</div>
+            </div>
+            <div id="carbon">
+              <img src={dataIcons.iconCarbon} alt="" height={20} />
+              <p>
+                This is a <strong> carbon-neutral </strong> delivery
+              </p>
             </div>
             <button id="btnNewOrder" onClick={concluirCompra}>
               Confirm Order

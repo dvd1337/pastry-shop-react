@@ -13,7 +13,6 @@ export function Provider({ children }) {
   );
 }
 
-// Validação de PropTypes
 Provider.propTypes = {
-  children: PropTypes.node.isRequired, // Aqui validamos que `children` deve ser um nó React
+  children: PropTypes.node.isRequired, 
 };

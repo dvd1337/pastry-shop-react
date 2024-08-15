@@ -44,14 +44,23 @@
   }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 430px) {
   #order {
-    margin-right: 156px;
+    margin-right: 158px;
   }
 }
-
-@media (max-width: 380px) {
+@media (max-width: 415px) {
+  #order {
+    margin-right: 147px;
+  }
+}
+@media (max-width: 400px) {
   #order {
     margin-right: 130px;
+  }
+}
+@media (max-width: 380px) {
+  #order {
+    margin-right: 110px;
   }
 }

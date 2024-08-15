@@ -75,6 +75,11 @@ main {
 .imgFood {
   border-radius: 10px;
   width: 275px;
+  border: none;
+}
+
+.border-active {
+  border: 2px solid var(--colorRed);
 }
 
 p {
@@ -94,6 +99,28 @@ p {
   font-size: 1.5em;
 }
 
+#carbon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px;
+  font-size: 0.9em;
+}
+
+#carbon p {
+  display: inline-flex;
+  color: var(--colorRose900);
+  font-weight: 400;
+}
+
+#carbon > p > strong {
+  margin: 0px 5px;
+}
+
+#carbon img {
+  margin-right: 10px;
+}
+
 /* Carrinho - Itens */
 #itens-carrinho {
   display: flex;
@@ -108,12 +135,6 @@ p {
 #imgCart {
   max-width: 100px;
   margin-bottom: 10px;
-}
-
-#itens-carrinho p {
-  color: var(--colorRose400);
-  text-align: center;
-  font-weight: 600;
 }
 
 #empty {
@@ -306,7 +327,6 @@ p {
   background-color: var(--colorRed);
   border-width: 0;
   border-radius: 25px;
-  margin-top: 10px;
   color: var(--colorRose100);
   width: 90%;
   height: 40px;
@@ -346,7 +366,7 @@ p {
 }
 
 #content {
-  max-height: 250px;
+  max-height: 220px;
   overflow-y: auto;
 }
 

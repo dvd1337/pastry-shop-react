@@ -3,21 +3,21 @@ import "./Mobile.css";
 import Carrinho from "./components/Carrinho";
 import { Provider } from "./components/Provider";
 import Menu from "./components/Menu";
-import CompraFinalizada from "./components/CompraFinalizada";
 import { CompraProvider } from "./components/CompraContext";
+import Compra from "./components/Compra";
 
 function App() {
   return (
     <>
-      <CompraProvider>
-        <main>
-          <Provider>
+      <Provider>
+        <CompraProvider>
+          <main>
             <Menu />
             <Carrinho />
-          </Provider>
-        </main>
-        <CompraFinalizada />
-      </CompraProvider>
+          </main>
+          <Compra />
+        </CompraProvider>
+      </Provider>
     </>
   );
 }

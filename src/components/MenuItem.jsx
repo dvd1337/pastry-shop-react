@@ -19,7 +19,6 @@ function MenuItem({ name, category, price, image }) {
           item.name === name ? { ...item, quantity: item.quantity + 1 } : item
         );
       } else {
-        // Associar o preço ao item ao adicioná-lo ao carrinho
         return [...prevItems, { name, category, price, quantity: 1 }];
       }
     });
@@ -39,7 +38,7 @@ function MenuItem({ name, category, price, image }) {
         .map((item) =>
           item.name === name ? { ...item, quantity: item.quantity - 1 } : item
         )
-        .filter((item) => item.quantity > 0); // Remove o item se a quantidade for 0
+        .filter((item) => item.quantity > 0);
     });
   };
 
@@ -53,7 +52,11 @@ function MenuItem({ name, category, price, image }) {
           srcSet={image.mobile}
           type="image/png"
         />
-        <img src={image.desktop} alt={name} className="imgFood" />
+        <img
+          src={image.desktop}
+          alt={name}
+          className={`imgFood ${quantity > 0 ? "border-active" : ""}`}
+        />
       </picture>
       <div className="btn">
         {quantity === 0 ? (
