@@ -56,7 +56,6 @@ main {
 /* Seção Restaurante */
 #restaurante {
   flex: 1;
-  margin-right: 50px;
 }
 
 .comidas {
@@ -127,7 +126,7 @@ p {
 
 /* Lista do Carrinho */
 #listaCarrinho {
-  display: none;
+  display: flex;
   width: 300px;
   flex-direction: column;
   height: 100%;
@@ -303,14 +302,14 @@ p {
 }
 
 #btnNewOrder {
+  display: block;
   background-color: var(--colorRed);
   border-width: 0;
   border-radius: 25px;
-  margin-top: 60px;
+  margin-top: 10px;
   color: var(--colorRose100);
   width: 90%;
   height: 40px;
-  display: block;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -319,23 +318,25 @@ p {
 
 /* Confirmação de Pedido */
 #compra {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.384);
-  position: absolute;
-  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.384); /* Fundo semi-transparente */
+  position: fixed; /* Altere para fixed para garantir que o modal fique no topo da página */
+  top: 0; /* Coloque o modal no topo da página */
+  left: 0;
+  z-index: 1000; /* Certifique-se de que o z-index é alto o suficiente para sobrepor outros elementos */
 }
 
 #pedido {
   width: 500px;
   padding: 25px;
   background-color: white;
-  position: absolute;
+  position: relative; /* Relativo ao #compra */
   border-radius: 15px;
-  z-index: 2;
+  z-index: 1001; /* Certifique-se de que o z-index é maior que o do #compra, se necessário */
 }
 
 #foods {
